@@ -64,7 +64,7 @@ const AdminSidebar = () => {
       </div>
 
       {/* Sidebar - Desktop */}
-      <div className="hidden md:block w-64 bg-white dark:bg-secondary-900 border-r border-secondary-200 dark:border-secondary-700 h-full">
+      <div className="hidden md:block w-64 bg-white dark:bg-secondary-900 border-r border-secondary-200 dark:border-secondary-700 h-screen sticky top-0">
         <div className="p-6">
           <h2 className="text-xl font-bold text-secondary-900 dark:text-white mb-8">Admin Panel</h2>
           <nav className="space-y-2">

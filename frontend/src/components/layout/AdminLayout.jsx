@@ -30,8 +30,10 @@ const AdminLayout = ({ children, title }) => {
       <AdminSidebar />
       
       {/* Main Content */}
-      <div className="flex-1 min-h-screen">
-        {children}
+      <div className="flex-1 overflow-auto">
+        <div className="p-6">
+          {children}
+        </div>
       </div>
     </motion.div>
   );
