@@ -11,9 +11,9 @@ node_modules/
 .env.production.local
 
 # Build files
-frontend/build
-frontend/dist
-frontend/out
+/build
+/dist
+/out
 /.next/
 /.nuxt/
 
