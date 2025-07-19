@@ -8,8 +8,8 @@ let socket;
  */
 export const initializeSocket = () => {
   if (!socket) {
-    // Get the API URL from environment or use fallback
-    const SOCKET_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+    // Use base URL without /api path for socket connection
+    const SOCKET_URL = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:5000';
     
     console.log('Initializing socket connection to:', SOCKET_URL);
     
@@ -309,3 +309,4 @@ export default {
   onCommentApproved,
   disconnectSocket,
 };
+
