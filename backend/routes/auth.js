@@ -681,7 +681,7 @@ if (process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET) {
         const tokens = await jwtService.generateTokenPair(user, deviceInfo);
 
         // Redirect to frontend with tokens
-        const redirectUrl = `${process.env.CLIENT_URL}/auth/callback?` +
+        const redirectUrl = `${process.env.FRONTEND_URL}/auth/callback?` +
           `accessToken=${tokens.accessToken}&` +
           `refreshToken=${tokens.refreshToken}&` +
           `user=${encodeURIComponent(JSON.stringify({
@@ -699,7 +699,7 @@ if (process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET) {
         res.redirect(redirectUrl);
       } catch (error) {
         console.error('Google OAuth callback error:', error);
-        res.redirect(`${process.env.CLIENT_URL}/login?error=oauth_failed`);
+        res.redirect(`${process.env.FRONTEND_URL}/login?error=oauth_failed`);
       }
     }
   );
@@ -713,7 +713,7 @@ if (process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET) {
   });
 
   router.get('/google/callback', (req, res) => {
-    res.redirect(`${process.env.CLIENT_URL}/login?error=oauth_not_configured`);
+    res.redirect(`${process.env.FRONTEND_URL}/login?error=oauth_not_configured`);
   });
 }
 

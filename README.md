@@ -26,8 +26,7 @@ CLOUDINARY_CLOUD_NAME=
 CLOUDINARY_API_KEY=
 CLOUDINARY_API_SECRET=
 # Client Configuration
-CLIENT_URL=http://localhost:5173
-FRONTEND_URL=http://localhost:5173
+FRONTEND_URL=https://blogging-platform-virid-ten.vercel.app
 # Google OAuth Configuration
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=

@@ -70,7 +70,7 @@ class EmailService {
   }
 
   async sendPasswordResetEmail(user, resetToken) {
-    const resetURL = `${process.env.CLIENT_URL}/reset-password/${resetToken}`;
+    const resetURL = `${process.env.FRONTEND_URL}/reset-password/${resetToken}`;
     
     const message = `
       Hi ${user.firstName},
@@ -140,7 +140,7 @@ class EmailService {
         <p>Welcome to MERN Blog! Your account has been successfully created.</p>
         <p>You can now start writing and sharing your stories with the world.</p>
         <div style="text-align: center; margin: 30px 0;">
-          <a href="${process.env.CLIENT_URL}/dashboard" 
+          <a href="${process.env.FRONTEND_URL}/dashboard"
              style="background-color: #3b82f6; color: white; padding: 12px 24px; 
                     text-decoration: none; border-radius: 6px; display: inline-block;">
             Go to Dashboard
