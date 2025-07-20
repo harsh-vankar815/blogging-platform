@@ -1,3 +1,5 @@
+PROJECT DEPLOYED ON VERCEL: https://blogging-platform-virid-ten.vercel.app/
+
 .env configurations for Frontend:
 # API Configuration
 VITE_API_URL=http://localhost:5000/api
